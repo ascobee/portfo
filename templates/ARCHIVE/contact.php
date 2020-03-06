@@ -16,7 +16,7 @@
 
   <link href="./static/favicon.ico" rel="icon">
 
-  <title>Thank You!</title>
+  <title>Contact me</title>
 
   <link href="./static/main.3f6952e4.css" rel="stylesheet">
 </head>
@@ -42,7 +42,7 @@
           <ul class="nav navbar-nav ">
             <li><a href="./index.html" title="">01 : Home</a></li>
             <li><a href="./works.html" title="">02 : Works</a></li>
-            <li><a href="./about.html" title="">03 : About</a></li>
+            <li><a href="./about.html" title="">03 : About me</a></li>
             <li><a href="./contact.html" title="">04 : Contact</a></li>
             <!-- <li><a href="./components.html" title="">05 : Components</a></li> -->
           </ul>
@@ -63,7 +63,70 @@
 
           <div class="row">
             <div class="col-md-10 col-md-offset-1">
-              Thank You! I will get in touch with you soon!
+              <!-- <form action="contact.php" method="POST" class="reveal-content"> -->
+              <form method="POST" class="reveal-content">
+                <?php
+                if(isset($_POST['submit'])){
+                  $del = ",";
+                  $email = $_POST['email'];
+                  $subject = $_POST['subject'];
+                  $message = $_POST['message'];
+                    
+                  $file = fopen("database2.csv", "a");
+                  // $data = $email.$del.$subject.$del.$message;
+
+                  if($file){
+                    fwrite($file, $email);
+                    fclose($file);
+                  }
+                }
+                ?>
+                <div class="row">
+                  <div class="col-md-7">
+                    <div class="form-group">
+                      <input name="email" type="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                      <textarea name="message" class="form-control" rows="5"
+                        placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-default btn-lg">Send</button>
+                  </div>
+                  <div class="col-md-5 address-container">
+                    <ul class="list-unstyled">
+                      <li>
+                        <span class="fa-icon">
+                          <i class="fas fa-phone-alt fa-sm" aria-hidden="true"></i>
+                        </span>
+                        <a href="tel:+3166555227">+ (316) 655-5227</a>
+                      </li>
+                      <li>
+                        <span class="fa-icon">
+                          <i class="fas fa-at fa-sm" aria-hidden="true"></i>
+                        </span>
+                        austin.scobee&commat;gmail.com
+                      </li>
+                      <li>
+                        <span class="fa-icon">
+                          <i class="fas fa-map-marker-alt fa-sm" aria-hidden="true"></i>
+                        </span>
+                        Arvada, CO
+                      </li>
+                    </ul>
+                    <h3>Social Networks</h3>
+                    <a href="http://www.linkedin.com/in/austin-scobee" title="" class="fa-icon">
+                      <i class="fab fa-linkedin-in fa-lg"></i>
+                    </a>
+                    <a href="http://github.com/ascobee" title="" class="fa-icon">
+                      <i class="fab fa-github-alt fa-lg"></i>
+                    </a>
+
+                  </div>
+                </div>
+              </form>
             </div>
 
           </div>

@@ -42,7 +42,7 @@
           <ul class="nav navbar-nav ">
             <li><a href="./index.html" title="">01 : Home</a></li>
             <li><a href="./works.html" title="">02 : Works</a></li>
-            <li><a href="./about.html" title="">03 : About me</a></li>
+            <li><a href="./about.html" title="">03 : About</a></li>
             <li><a href="./contact.html" title="">04 : Contact</a></li>
             <!-- <li><a href="./components.html" title="">05 : Components</a></li> -->
           </ul>
@@ -63,48 +63,49 @@
 
           <div class="row">
             <div class="col-md-10 col-md-offset-1">
-              <form action="submit_form" method="POST" class="reveal-content">
+              <form action="" method="POST" class="reveal-content">
                 <div class="row">
                   <div class="col-md-7">
                     <div class="form-group">
-                      <input name="email" type="email" class="form-control" id="email" placeholder="Email">
+                      <input name="email" type="email" class="form-control" id="email" placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                      <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject">
+                      <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject"
+                        required>
                     </div>
                     <div class="form-group">
-                      <textarea name="message" class="form-control" rows="5"
-                        placeholder="Enter your message"></textarea>
+                      <textarea name="message" class="form-control" rows="5" placeholder="Enter your message"
+                        required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-default btn-lg">Send</button>
+                    <button type="submit" class="btn btn-default btn-lg" formaction="submitform.php">Send</button>
                   </div>
                   <div class="col-md-5 address-container">
                     <ul class="list-unstyled">
                       <li>
                         <span class="fa-icon">
-                          <i class="fas fa-phone-alt fa-sm" aria-hidden="true"></i>
+                          <i class="fas fa-phone-alt fa-xs" aria-hidden="true"></i>
                         </span>
                         <a href="tel:+3166555227">+ (316) 655-5227</a>
                       </li>
                       <li>
                         <span class="fa-icon">
-                          <i class="fas fa-at fa-sm" aria-hidden="true"></i>
+                          <i class="fas fa-at fa-xs" aria-hidden="true"></i>
                         </span>
                         austin.scobee&commat;gmail.com
                       </li>
                       <li>
                         <span class="fa-icon">
-                          <i class="fas fa-map-marker-alt fa-sm" aria-hidden="true"></i>
+                          <i class="fas fa-map-marker-alt fa-xs" aria-hidden="true"></i>
                         </span>
                         Arvada, CO
                       </li>
                     </ul>
                     <h3>Social Networks</h3>
                     <a href="http://www.linkedin.com/in/austin-scobee" title="" class="fa-icon">
-                      <i class="fab fa-linkedin-in fa-lg"></i>
+                      <i class="fab fa-linkedin-in fa-sm"></i>
                     </a>
                     <a href="http://github.com/ascobee" title="" class="fa-icon">
-                      <i class="fab fa-github-alt fa-lg"></i>
+                      <i class="fab fa-github-alt fa-sm"></i>
                     </a>
 
                   </div>
