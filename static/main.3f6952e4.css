@@ -4918,8 +4918,10 @@ body.minimal {
   color: #fff;
   /* background-color: #000; */
   background-color: #161616;
+  /* background-color: #0e477b; */
   /* border-color: #000; */
   border-color: #040303;
+  /* border-color: #063661; */
 }
 .btn-primary:focus,
 .btn-primary:hover {
