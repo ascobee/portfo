@@ -1,6 +1,6 @@
 <?php
     $public_key = "6LfF97AZAAAAAIBLplqgrOoI4AKPgE6lA85KzKY5";
-    $private_key = "6LfF97AZAAAAANYUuSKcJgRZNockh9JaagDLjMtq";
+    $private_key = "secret key";
     $recaptcha_api_url = "https://www.google.com/recaptcha/api/siteverify";
 
     $success_url = "https://www.austinscobee.com/thankyou.html";

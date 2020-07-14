@@ -5,7 +5,7 @@ from urlparse import parse_qs
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 
 SITE_VERIFY_URL = 'https://www.google.com/recaptcha/api/siteverify'
-SITE_SECRET = '6Lebyq8ZAAAAAC_Zafm3gqCp4aNxMHgObGHq5YJ1'
+SITE_SECRET = 'secret key'
 RECAPTCHA_RESPONSE_PARAM = 'g-recaptcha-response'
 
 
