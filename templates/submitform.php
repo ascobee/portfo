@@ -1,21 +1,45 @@
 <?php
-date_default_timezone_set("MST");
-$message_date = date("m/d/y");
-$message_time = date("H:i:s A");
-$csv_line = array(
-    'date' => $message_date,
-    'time' => $message_time,
-    'email' => $_POST['email'],
-    'subject' => $_POST['subject'],
-    'message' => $_POST['message']
-);
-$fname = 'database.csv';
-$csv_line = implode(',', $csv_line);
-$fcon = fopen($fname, 'a');
-$fcontent = "\r\n" . $csv_line;
+    $public_key = "6LfF97AZAAAAAIBLplqgrOoI4AKPgE6lA85KzKY5";
+    $private_key = "6LfF97AZAAAAANYUuSKcJgRZNockh9JaagDLjMtq";
+    $recaptcha_api_url = "https://www.google.com/recaptcha/api/siteverify";
 
-fwrite($fcon, $fcontent);
-fclose($fcon);
+    $success_url = "https://www.austinscobee.com/thankyou.html";
+    $error_url = "https://www.austinscobee.com/formerror.html";
+    $send_email_url = "https://www1.domain.com/scripts/formemail.html";
 
-header("Location: https://www.austinscobee.com/thankyou.html");
-exit();
+    $response_token = $_POST['g-recaptcha-response'];
+    $user_ip_address = $_SERVER['REMOTE_ADDR'];
+
+    function redirect($url)
+    {
+        ob_start();
+        header("Location: ".$url);
+        ob_end_flush();
+    }
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, "$recaptcha_api_url");
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, [
+        'secret' => $private_key,
+        'response' => $response_token,
+        'remoteip' => $user_ip_address
+    ]);
+    $api_response = json_decode(curl_exec($ch));
+    curl_close($ch);
+
+    if ($api_response->success == 1) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $send_email_url);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $_POST);
+        curl_exec($ch);
+        curl_close($ch);
+        redirect($success_url);
+    } else {
+        redirect($error_url);
+    }

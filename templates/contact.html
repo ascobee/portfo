@@ -34,9 +34,8 @@
   <div id="site-border-right"></div>
   <div id="site-border-top"></div>
   <div id="site-border-bottom"></div>
-  <!-- Add your content of header -->
   <header>
-    <nav class="navbar  navbar-fixed-top navbar-default">
+    <nav class="navbar navbar-fixed-top navbar-default">
       <div class="container">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
           aria-expanded="false">
@@ -69,9 +68,8 @@
 
           <div class="row">
             <div class="col-md-10 col-md-offset-1">
-              <form method="POST" action="https://www1.domain.com/scripts/formemail.html" class="reveal-content">
+              <form method="POST" action="./submitform.php" class="reveal-content" id="contact-form">
                 <input type="hidden" name="my_email" value="austin.scobee@gmail.com">
-                <input type="hidden" name="subject" value="Portfolio Contact Form">
                 <div class="row">
                   <div class="col-md-7">
                     <div class="form-group">
@@ -85,8 +83,11 @@
                       <textarea name="message" class="form-control" rows="5" placeholder="Enter your message"
                         required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-default btn-lg" formaction="submitform.php">Send</button>
+                    <div class="g-recaptcha" data-sitekey="6LfF97AZAAAAAIBLplqgrOoI4AKPgE6lA85KzKY5"></div>
+                    <br />
+                    <button type="submit" class="btn btn-default btn-lg" value="Submit">Send</button>
                   </div>
+
                   <div class="col-md-5 address-container">
                     <ul class="list-unstyled">
                       <li>
@@ -160,6 +161,7 @@
     });
   </script>
 
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script type="text/javascript" src="./static/main.70a66962.js"></script>
 
 </body>
