@@ -23,5 +23,9 @@ env/
 
 # OTHER #
 #########
-# templates/ARCHIVE
-# temporaryfiles
+ARCHIVE/
+temporaryfiles/
+tests/
+*.csv
+server.py
+submitform.php
