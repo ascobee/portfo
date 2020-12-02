@@ -23,5 +23,5 @@ env/
 
 # OTHER #
 #########
-templates/ARCHIVE
-temporaryfiles
+# templates/ARCHIVE
+# temporaryfiles
