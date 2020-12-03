@@ -26,6 +26,7 @@ env/
 ARCHIVE/
 temporaryfiles/
 tests/
+originals/
 *.csv
 server.py
 submitform.php
