@@ -3,52 +3,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://www.austinscobee.com/works/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-07</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://www.austinscobee.com/about.html</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-07</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.austinscobee.com/contact.html</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-07</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.austinscobee.com/austin-scobee-resume-2020.pdf</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-07</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.austinscobee.com/works/passwordchecker.html</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-07</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.austinscobee.com/works/topstories.html</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-07</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.austinscobee.com/works/calculator.html</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-07</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.austinscobee.com/works/snakegame.html</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-07</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.austinscobee.com/works/backend-rest-api.html</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-07</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.austinscobee.com/works/customdesk.html</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-07</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.austinscobee.com/works/putting-green.html</loc>
+    <lastmod>2020-12-07</lastmod>
     <priority>0.80</priority>
   </url>
 </urlset>
